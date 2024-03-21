@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ anime.title }}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>{{ anime.title }}</h1>
+<p>Genre: {{ anime.genre }}</p>
+<p>Studio: {{ anime.studio }}</p>
+<ul>
+{% for episode in episodes %}
+<li><a href="/anime/{{ anime._id }}/episode/{{ episode._id }}">{{ episode.title }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
