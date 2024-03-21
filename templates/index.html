@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime Streaming Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Anime Streaming Website</h1>
+<form action="/search" method="POST">
+<input type="text" name="title" placeholder="Search by title">
+<input type="text" name="genre" placeholder="Search by genre">
+<input type="submit" value="Search">
+</form>
+<ul>
+{% for anime in animes %}
+<li><a href="/anime/{{ anime._id }}">{{ anime.title }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
